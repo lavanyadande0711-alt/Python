@@ -1,49 +1,49 @@
-# Python
-# To-Do List Application
+# 📝 To-Do List Application
 
-tasks = []
+A lightweight, console-based task management application built with Python. This tool helps users organize, view, and manage daily tasks directly from the command line interface.
 
-def show_tasks():
-    if not tasks:
-        print("\nNo tasks available.")
-    else:
-        print("\nYour Tasks:")
-        for i, task in enumerate(tasks, start=1):
-            print(f"{i}. {task}")
+## 🚀 Features
 
-while True:
-    print("\n===== TO-DO LIST =====")
-    print("1. Add Task")
-    print("2. View Tasks")
-    print("3. Remove Task")
-    print("4. Exit")
+* **Interactive Menu**: Simple numbered prompt system for easy navigation.
+* **Add Tasks**: Instantly append new items to your dynamic session list.
+* **View List**: Displays all pending tasks formatted with automated numbering.
+* **Remove Entry**: Safely delete items from the list by typing their task number.
+* **Input Validation**: Prevents application crashes from empty or invalid menu inputs.
 
-    choice = input("Enter your choice: ")
+## 🛠️ Prerequisites
 
-    if choice == "1":
-        task = input("Enter task: ")
-        tasks.append(task)
-        print("Task added successfully!")
+* Python 3.x installed on your local machine.
 
-    elif choice == "2":
-        show_tasks()
+## 💻 How To Run
 
-    elif choice == "3":
-        show_tasks()
-        if tasks:
-            try:
-                task_num = int(input("Enter task number to remove: "))
-                if 1 <= task_num <= len(tasks):
-                    removed = tasks.pop(task_num - 1)
-                    print(f"Removed: {removed}")
-                else:
-                    print("Invalid task number.")
-            except ValueError:
-                print("Please enter a valid number.")
+1. Clone this repository to your local computer:
+   ```bash
+   git clone https://github.com
+   ```
+2. Navigate into the project folder:
+   ```bash
+   cd YOUR_REPOSITORY_NAME
+   ```
+3. Run the application script:
+   ```bash
+   python dolist.py
+   ```
 
-    elif choice == "4":
-        print("Goodbye!")
-        break
+## 📋 Usage Example
 
-    else:
-        print("Invalid choice. Try again.")
+When you start the application, you will see the following terminal prompt:
+```text
+===== TO-DO LIST =====
+1. Add Task
+2. View Tasks
+3. Remove Task
+4. Exit
+Enter your choice: 
+```
+
+## 🔮 Future Roadmap
+
+* Add persistent file storage using `.json` to save tasks permanently.
+* Introduce task priority levels (High, Medium, Low).
+* Implement due dates and completion timestamps for each task.
+*
